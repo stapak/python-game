@@ -1,9 +1,9 @@
 import pygame
 
-class ship():
-    def __init__(self):
+class Ship():
+    def __init__(self,screen):
         """ Initialize the ship and set its starting position."""
-        self.screen =screen
+        self.screen=screen
 
         # Load the ship image and get its rect.
 
@@ -12,7 +12,7 @@ class ship():
         self.screen_rect = screen.get_rect()
 
         # Start each new ship at the bottom center of the screen.
-        self.rect.centerx = self.screen_rect.centrex
+        self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
     
     def blitme(self):
