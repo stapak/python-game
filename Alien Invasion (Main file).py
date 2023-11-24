@@ -2,7 +2,7 @@ import sys
 import pygame 
 from setting import Setting
 from ship import Ship
-import game_funtions as gf
+
 
 def run_game():
     
@@ -20,7 +20,9 @@ def run_game():
 
     while True:
         # Watch for keyboard and mouse events.
-        gf.check_events()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
         
         # Redraw the screen during each pass through the loop 
         screen.fill(ai_setting.bg_color)
